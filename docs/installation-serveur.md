@@ -7,7 +7,7 @@
 
 ## Installation automatique
 
-    git clone (https://github.com/Luidji-artemis/wireguard-vpn)
+    git clone https://github.com/Luidji-artemis/wireguard-vpn
     cd wireguard-vpn
     sudo ./scripts/install-wireguard.sh
 
