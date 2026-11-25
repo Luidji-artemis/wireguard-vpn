@@ -1,0 +1,13 @@
+# Exemple de configuration serveur WireGuard (/etc/wireguard/wg0.conf)
+# Remplacer chaque valeur entre chevrons. Ne jamais publier la vraie cle.
+[Interface]
+Address = 10.8.0.1/24
+ListenPort = 51820
+PrivateKey = <CLE_PRIVEE_SERVEUR>
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o <INTERFACE_SORTIE> -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o <INTERFACE_SORTIE> -j MASQUERADE
+
+[Peer]
+# client: client1
+PublicKey = <CLE_PUBLIQUE_CLIENT1>
+AllowedIPs = 10.8.0.2/32

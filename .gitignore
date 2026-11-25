@@ -1,0 +1,11 @@
+# Cles privees et publiques
+*.key
+*_private*
+*_public*
+# Configs reelles (seuls les .conf.example sont publies)
+*.conf
+clients/
+# Divers
+*.bak
+*.tmp
+.env
