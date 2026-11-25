@@ -21,7 +21,7 @@ Details : [docs/architecture.md](docs/architecture.md)
 
 Sur le serveur (Debian ou Ubuntu) :
 
-    git clone (https://github.com/Luidji-artemis/wireguard-vpn)
+    git clone https://github.com/Luidji-artemis/wireguard-vpn
     cd wireguard-vpn
     sudo ./scripts/install-wireguard.sh
     sudo ./scripts/add-client.sh client1 <IP_SERVEUR>
